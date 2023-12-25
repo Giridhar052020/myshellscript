@@ -2,7 +2,7 @@
 
 # Gender Maile or Femail
 
-echo "Please enter your Gender ::"
+echo -n "Please enter your Gender ::"
 
 read gender 
 
