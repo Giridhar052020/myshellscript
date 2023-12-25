@@ -1,11 +1,14 @@
 #!/bin/bash
 
-echo " Hello Honey, Good Morning"
+NAME1=Annaya
+NAME2=Giri
 
-echo " HI DAD, very good morning"
+echo " Hello $NAME1, Good Morning"
 
-echo " Hi Honey, How are you"
+echo " HI $NAME2, very good morning"
 
-echo " HI DAD, I am fine, How about you"
+echo " Hi $NAME1, How are you"
 
-echo " Hi honey. I am fine. thanks"
+echo " HI $NAME2, I am fine, How about you"
+
+echo " Hi $NAME1. I am fine. thanks"
