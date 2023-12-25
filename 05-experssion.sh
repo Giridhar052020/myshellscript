@@ -2,5 +2,8 @@
 
 X=$1
 Y=$2
+echo "Please enter the values ::"
 
-echo "total value 'expr $1+$2'"
+Total=$(expr $X + $Y)
+
+echo "total value $Total"
