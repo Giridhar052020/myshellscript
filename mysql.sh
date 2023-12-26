@@ -15,7 +15,7 @@ fi # END the Conidtion
 
 yum install mysql -y # YUM will download and install the application
 
-if [$? -eq 0 ]
+if [ $? -eq 0 ]
 then
     echo "Successfully MYSQL Is Install"
 else
