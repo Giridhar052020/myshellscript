@@ -1,6 +1,18 @@
 #!/bin/bash
 # MySQL Installation and Validation for application
 
+# Validation the above script
+
+VALIDATE=(){
+if [ $1 -eq 0 ]
+then
+    echo "$2 Successfully Applcation Is Installed"
+else
+    echo "$2 Failure, Unable to Install the Application"
+
+fi # END Condition
+}
+
 ID=$(id -u)
 
 if [ $ID -eq 0 ]
@@ -12,20 +24,6 @@ else
     exit 1
 
 fi # END the Conidtion
-
-# Validation the above script
-
-VALIDATE=(){
-if [ $1 -eq 0 ]
-then
-    echo "$2 Successfully Applcation Is Installed"
-else
-    echo "$2 Failure, Unable to Install the Application"
-
-fi # END Condition
-
-}
-
 
 yum install mysql -y # YUM will download and install the application
 
