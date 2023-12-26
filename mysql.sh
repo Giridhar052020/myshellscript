@@ -32,9 +32,9 @@ else
     echo "Failure, Unable to install the GIT"
 fi # ENd Condition
 
-yum install PostgreSQL -y # POSTGRESQL Database Installing
+yum install postgresql -y # POSTGRESQL Database Installing
 
-if [$? -eq 0 ]
+if [ $? -eq 0 ]
 then
     echo "Successfully installed the POSTGRESQL"
 else   
