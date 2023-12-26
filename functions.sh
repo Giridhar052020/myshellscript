@@ -3,7 +3,7 @@
 
 # Validation the above script
 
-VALIDATE=(){
+VALIDATE(){
 if [ $1 -eq 0 ]
 then
     echo "$2 Successfully Applcation Is Installed"
@@ -21,7 +21,7 @@ then
 else
     echo "Failure : You Don't have access to install application"
 
-    exit 1
+exit 1
 
 fi # END the Conidtion
 
