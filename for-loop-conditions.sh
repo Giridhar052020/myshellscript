@@ -27,3 +27,15 @@ echo -e "$G Total Number of Packages Passed $# $N" # $# indicates the number of 
 
 echo -e "$Y The Total Packages :: $@"
 
+for software in $@ # SOFTWARE==> Package (mysql, git)
+do
+    dnf list installed $software 
+    if [ $? -eq 0 ]
+    then
+    echo -e "$Y Already $software Installed, Please skip this $N"
+else
+    yum install $software -y 
+    VALIDATE $? " Installing the $software"
+    fi # END Condition
+done
+
