@@ -6,9 +6,9 @@
 VALIDATE(){
 if [ $1 -eq 0 ]
 then
-    echo "$2 Successfully Applcation Is Installed"
+    echo "$2::$G Successfully Applcation Is Installed $N"
 else
-    echo "$2 Failure, Unable to Install the Application"
+    echo "$2 ::$R Failure, Unable to Install the Application $N"
 
 fi # END Condition
 }
@@ -16,13 +16,18 @@ fi # END Condition
 ID=$(id -u)
 TIMESTAMP=$(date +%F-%X)
 LOG="/tmp/$0::$TIMESTAMP.log"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
+echo "Script is running at $TIMESTAMP" &>>$LOG
 
 if [ $ID -eq 0 ]
 then
-    echo "Success : Your are having root access to install application"
+    echo "$G Success : Your are having root access to install application $N"
 else
-    echo "Failure : You Don't have access to install application"
+    echo "$R Failure : You Don't have access to install application $N"
 
 exit 1
 
