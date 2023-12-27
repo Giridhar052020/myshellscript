@@ -29,12 +29,12 @@ echo -e "$Y The Total Packages :: $@"
 
 for software in $@ # SOFTWARE==> Package (mysql, git)
 do
-    dnf list installed $software 
+    dnf list installed $software &>>LOG
     if [ $? -eq 0 ]
     then
     echo -e "$Y Already $software Installed, Please skip this $N"
 else
-    yum install $software -y 
+    yum install $software -y &>>$LOG
     VALIDATE $? " Installing the $software"
     fi # END Condition
 done
