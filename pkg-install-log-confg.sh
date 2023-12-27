@@ -35,7 +35,7 @@ fi # END the Conidtion
 
 yum install firefox -y &>>$LOG # YUM will download and install the application
 
-VALIDATE $? "Installing mysql"
+VALIDATE $? "Installing firefox"
 
 yum install wget -y &>>$LOG # Wget Appliation Installing
 
@@ -47,8 +47,12 @@ VALIDATE $? "Installing POSTGRESQL"
 
 yum install mysql -y &>>$LOG # sql database installation
 
-VALIDATE $? "Installing SQL"
+VALIDATE $? "Installing MYSQL"
 
 yum install git -y &>>$LOG # GIT Installation 
 
 VALIDATE $? "Installing GIT"
+
+yum install web -y &>>$LOG # WEB Installation 
+
+VALIDATE $? "Installing web"
